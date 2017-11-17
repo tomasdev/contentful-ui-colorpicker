@@ -4,6 +4,7 @@
   "description": "UI Extension to add Color Picker to Simple Text field's appearance.",
   "scripts": {
     "update": "gulp build && contentful-extension update --space-id $SPACE_ID --force",
+    "create": "contentful-extension create --space-id $SPACE_ID",
     "dev": "contentful-extension update --space-id $SPACE_ID --force --src https://localhost:3000 && python https"
   },
   "author": "Tomas Roggero <hola@tomasroggero.com>",
@@ -15,7 +16,6 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-inline-source": "^3.0.0",
-    "gulp-minify-inline": "^0.2.1",
-    "gulp-rename": "^1.2.2"
+    "gulp-minify-inline": "^0.2.1"
   }
 }
