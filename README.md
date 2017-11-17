@@ -5,13 +5,14 @@ Color picker custom UI Extension for Contentful
 
 # Usage
 
-Requirements: [contentful-extension](https://github.com/contentful/contentful-extension-cli)
+Requirements: [node](https://nodejs.org/en/), [contentful-extension](https://github.com/contentful/contentful-extension-cli)
 
 
 CONTENTFUL_MANAGEMENT_ACCESS_TOKEN
 SPACE_ID
-npm run dev
-npm run update
+npm run -s dev
+npm run -s update
+npm install
 
 
 # Development / Contributions

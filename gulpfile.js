@@ -11,7 +11,7 @@ if (!fs.existsSync('./build')) {
 }
 
 gulp.task('js', () =>
-  return browserify('./src/extension.js')
+  browserify('./src/extension.js')
     .transform('babelify', { presets: ['es2015'] })
     .bundle()
     .on('error', function (err) {
@@ -23,14 +23,14 @@ gulp.task('js', () =>
 );
 
 gulp.task('build', ['js'], () =>
-  return gulp.src('./src/index.html')
+  gulp.src('./src/index.html')
     .pipe(inlinesource({
       compress: true,
       handlers: [function js(source, context, next) {
-        source.content = fs.readFileSync(source.filepath.replace('extension.js', 'build/extension.min.js'));
+        source.content = fs.readFileSync(source.filepath.replace('extension.js', '../build/extension.min.js'));
         next();
       }]
     }))
     .pipe(minifyInline())
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./build'))
 );
