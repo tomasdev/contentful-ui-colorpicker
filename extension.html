@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/contentful-ui-extensions-sdk@2/dist/cf-extension.css">
+</head>
+<body>
+<input type="color" name="color" id="color" />
+<script src="https://unpkg.com/contentful-ui-extensions-sdk@3"></script>
+<script src="https://cdn.rawgit.com/dciccale/nativeColorPicker/b44c551d/nativeColorPicker.js"></script>
+<script>
+window.nativeColorPicker.init('color');
+
+window.contentfulExtension.init(function (extension) {
+	var color = document.querySelector('#color');
+	color.value = extension.field.getValue() || '';
+
+	color.addEventListener('input', function () {
+		extension.field.setValue(color.value);
+	}, false);
+});
+</script>
+</body>
+</html>
