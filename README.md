@@ -6,7 +6,7 @@ Custom Contentful UI Extension for fields of type "Short Text" (a.k.a. Symbol)
 
 It uses the native OS color picker, and includes a polyfill for older browsers (thanks to [nativeColorPicker](https://github.com/dciccale/nativeColorPicker))
 
-# Installation and Usage
+### Installation and Usage
 
 Requirements: [node](https://nodejs.org/en/), [contentful-extension](https://github.com/contentful/contentful-extension-cli)
 
@@ -16,7 +16,7 @@ To create it: `CONTENTFUL_MANAGEMENT_ACCESS_TOKEN=<your-token-goes-here> content
 
 You should see a successful message and then be able to select "Color Picker" for any Short Text field in your CMS instance.
 
-# Development / Contributions
+### Development / Contributions
 
 Requirements: python (self-signed certificate is in the repo to prevent Chrome enforcing of https)
 
